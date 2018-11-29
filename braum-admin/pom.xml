@@ -25,21 +25,15 @@
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
-        <!--mysql-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <!--druid-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-        </dependency>
         <!--core-->
         <dependency>
             <groupId>com.sunmoka.it</groupId>
             <artifactId>braum-core</artifactId>
+        </dependency>
+        <!--database-->
+        <dependency>
+            <groupId>com.sunmoka.it</groupId>
+            <artifactId>braum-database</artifactId>
         </dependency>
         <!--logback-->
         <dependency>
