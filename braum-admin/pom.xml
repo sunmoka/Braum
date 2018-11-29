@@ -36,6 +36,16 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
         </dependency>
+        <!--core-->
+        <dependency>
+            <groupId>com.sunmoka.it</groupId>
+            <artifactId>braum-core</artifactId>
+        </dependency>
+        <!--logback-->
+        <dependency>
+            <groupId>com.sunmoka.it</groupId>
+            <artifactId>braum-logback</artifactId>
+        </dependency>
     </dependencies>
 
     <!-- Package as an executable jar -->
