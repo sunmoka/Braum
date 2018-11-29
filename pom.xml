@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.sunmoka.it</groupId>
     <artifactId>braum-all</artifactId>
-    <version>${project.version}</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>braum</name>
 
@@ -15,7 +15,7 @@
         <junit.version>4.11</junit.version>
         <mybatis.version>1.3.2</mybatis.version>
         <druid.version>1.1.12</druid.version>
-        <project.version>${project.version}</project.version>
+        <braum.version>1.0-SNAPSHOT</braum.version>
     </properties>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -48,27 +48,27 @@
             <dependency>
                 <groupId>com.sunmoka.it</groupId>
                 <artifactId>braum-admin</artifactId>
-                <version>${project.version}</version>
+                <version>${braum.version}</version>
             </dependency>
             <!--api-->
             <dependency>
                 <groupId>com.sunmoka.it</groupId>
                 <artifactId>braum-api</artifactId>
-                <version>${project.version}</version>
+                <version>${braum.version}</version>
             </dependency>
             <!--core-->
             <dependency>
                 <groupId>com.sunmoka.it</groupId>
                 <artifactId>braum-core</artifactId>
-                <version>${project.version}</version>
+                <version>${braum.version}</version>
             </dependency>
-            <!--logback-->
+            <!--logblack-->
             <dependency>
                 <groupId>com.sunmoka.it</groupId>
                 <artifactId>braum-logback</artifactId>
-                <version>${project.version}</version>
+                <version>${braum.version}</version>
             </dependency>
-
+            <!--junit-->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>

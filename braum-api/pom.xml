@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>braum-api</artifactId>
     <groupId>com.sunmoka.it</groupId>
-    <version>${project.version}</version>
+    <version>${braum.version}</version>
     <packaging>jar</packaging>
     <name>braum-api</name>
 
