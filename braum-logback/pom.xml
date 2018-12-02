@@ -13,5 +13,10 @@
     <version>${braum.version}</version>
     <packaging>jar</packaging>
     <name>braum-logback</name>
-
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+    </dependencies>
 </project>
