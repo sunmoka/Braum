@@ -30,6 +30,11 @@
             <groupId>com.sunmoka.it</groupId>
             <artifactId>braum-database</artifactId>
         </dependency>
+        <!--logback-->
+        <dependency>
+            <groupId>com.sunmoka.it</groupId>
+            <artifactId>braum-logback</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
