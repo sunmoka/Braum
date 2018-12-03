@@ -6,6 +6,7 @@ import com.alibaba.druid.support.http.WebStatFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -67,6 +68,29 @@ public class DruidConfig {
     @Value("${spring.datasource.logSlowSql}")
     private String logSlowSql;
 
+    @ConditionalOnProperty(value = {"spring.datasource.druidMonitor"}, matchIfMissing = false)
+    @Bean
+    public ServletRegistrationBean druidServlet() {
+        ServletRegistrationBean reg = new ServletRegistrationBean();
+        reg.setServlet(new StatViewServlet());
+        reg.addUrlMappings("/druid/*");
+        reg.addInitParameter("loginUsername", username);
+        reg.addInitParameter("loginPassword", password);
+        reg.addInitParameter("logSlowSql", logSlowSql);
+        return reg;
+    }
+
+    @ConditionalOnProperty(value = {"spring.datasource.druidMonitor"}, matchIfMissing = false)
+    @Bean
+    public FilterRegistrationBean filterRegistrationBean() {
+        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
+        filterRegistrationBean.setFilter(new WebStatFilter());
+        filterRegistrationBean.addUrlPatterns("/*");
+        filterRegistrationBean.addInitParameter("exclusions", "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*");
+        filterRegistrationBean.addInitParameter("profileEnable", "true");
+        return filterRegistrationBean;
+    }
+
     @Bean
     public DataSource druidDataSource() {
         DruidDataSource datasource = new DruidDataSource();
@@ -91,4 +115,5 @@ public class DruidConfig {
         }
         return datasource;
     }
+
 }
