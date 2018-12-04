@@ -25,11 +25,6 @@
             <groupId>com.sunmoka.it</groupId>
             <artifactId>braum-core</artifactId>
         </dependency>
-        <!--database-->
-        <dependency>
-            <groupId>com.sunmoka.it</groupId>
-            <artifactId>braum-database</artifactId>
-        </dependency>
         <!--logback-->
         <dependency>
             <groupId>com.sunmoka.it</groupId>

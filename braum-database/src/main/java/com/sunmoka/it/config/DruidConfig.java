@@ -92,7 +92,7 @@ public class DruidConfig {
     }
 
     @Bean
-    public DataSource druidDataSource() {
+    public DataSource dataSource() {
         DruidDataSource datasource = new DruidDataSource();
         datasource.setUrl(dbUrl);
         datasource.setUsername(username);
