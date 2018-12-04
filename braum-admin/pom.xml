@@ -35,6 +35,10 @@
             <groupId>com.sunmoka.it</groupId>
             <artifactId>braum-logback</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.sunmoka.it</groupId>
+            <artifactId>braum-service</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

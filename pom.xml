@@ -74,6 +74,12 @@
                 <artifactId>braum-database</artifactId>
                 <version>${braum.version}</version>
             </dependency>
+            <!--service-->
+            <dependency>
+                <groupId>com.sunmoka.it</groupId>
+                <artifactId>braum-service</artifactId>
+                <version>${braum.version}</version>
+            </dependency>
             <!--junit-->
             <dependency>
                 <groupId>junit</groupId>
@@ -89,5 +95,6 @@
         <module>braum-logback</module>
         <module>braum-admin</module>
         <module>braum-database</module>
+        <module>braum-service</module>
     </modules>
 </project>
